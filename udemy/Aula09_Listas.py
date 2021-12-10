@@ -1,15 +1,11 @@
 """
 Listas
 Uma coleção de dados muiito poderosa e importante.
-
 Em C - Vetores e Matrizes : Apenas m tipo de dados e tamnho unico.
-
 Em Python as Listas
     - São dinamicas e podem receber qualquer tipo de dados
     - Tamanho limitado á memória disponivel do seu PC.
-
 Sintaxe: [elemento1, elemento2 , ...., elementoN]
-
 """
 #Exemplo 1:
 
@@ -77,4 +73,90 @@ print(frase)
 lista10 = ['Silvo', 'Santos', 'vem', 'ai']
 frase = '@'.join(lista10)
 print(frase)
-    
+
+    #Contar a quantidade de elementos de uma lista
+print('A quantidade de elementos na lista7 é : ', len(lista7))
+
+    #Verificar se determinado valor está na lista
+
+if 'x' in lista7:
+    print('x na lista7')
+else:
+    print('x não está na lista')
+
+print('x' in lista7) #Retorna true or false
+
+    #Count - Verificar a quantidade de vez que um item se repete em uma lista
+
+print(lista6)
+quantidade = lista6.count('8')
+print(f'Eu encontrei {quantidade} vez/vezes')
+
+    #Sort - Ordenar uma lista
+# OBS: NÃO ORDENA INTEIROS COM STRING JUNTO
+# OBS: Considera o tamanho da String
+lista11 = [12, 43, 453, 345, 3, 45, 3, 534, 53, 6, 5, 56, 7, 8, 8, 5, 43, 5, 23, 4, 2]
+print(lista11)
+
+lista11.sort()
+print(lista11)
+
+lista12 = ['vc', 'a', 'avian']
+lista12.sort()
+print(lista12)
+
+    #Reverse - Inverte a ordem de uma lista
+print(lista7)
+lista7.reverse()
+print(lista7)
+
+    #Slicing - Outra maneira de inverter a ordem
+print(lista6)
+print(lista6[::-1])
+
+        #lista[inicio:fim:passo]
+print(lista7)
+print(lista7[2:])
+print(lista7[2:5:2])
+
+        #acessar elementos da lista
+print(lista7[2])
+print(lista7[-2]) #É como se a lista fosse um circulo, então a posição negativa seria o fim o array para inicio.
+
+#print(lista7[15]) #Não tem este index na lista então apresenta erro
+#print(lista7[-15])
+
+for ind in range(0, 3):
+    print(lista7[ind])
+
+    #Substituir elemento de uma lista
+print(lista7)
+lista7[1] = False
+lista7[4] = 'Vodka'
+print(lista7)
+
+# Remover elementos de uma lista
+
+    #POP = Remove o último elemento de uma lista
+    #obs: retorna o elemento removido
+
+print(lista2)
+print(lista2.pop())
+print(lista2)
+
+    #obs: é possivel determinal qual elemento querems excluir da lista
+
+print(lista2)
+print(lista2.pop(5))
+print(lista2)
+
+
+#Repetir elementos de uma lista
+print(lista4)
+lista4 = lista4 * 4
+print(lista4)
+
+#Limpar uma lista
+print(lista3)
+lista3.clear()
+print(lista3)
