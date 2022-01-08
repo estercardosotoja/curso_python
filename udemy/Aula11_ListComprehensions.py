@@ -14,7 +14,7 @@ for num in impares:
     pares.append(num*2)
 print(pares)
 
-    # Com List  Comprehensions  
+ # Com List  Comprehensions
 pares = [num * 2 for num in impares]
 print(pares)
 
