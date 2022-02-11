@@ -36,7 +36,7 @@ As tuplas são muito parecidas com listas, há duas diferenças:
     # Concatenação duas ou mais tuplas:
         ex.: tuplanova = tuplas1 + tuplas5
              print(tuplanova)
-
+,
         ex:. tuplas1 = tuplas1 + tuplas5
         print(tuplas1)
 
