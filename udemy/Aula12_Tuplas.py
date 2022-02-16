@@ -43,7 +43,7 @@ As tuplas são muito parecidas com listas, há duas diferenças:
         OBS: A primeira tuplas1 foi apagada, e assim foi criada uma nova no momento da concatenação.
 
     # Verificar valor está na tupla
-        ex:. print(10 in tuplas8)
+        ex:. print(10 in tuplas8)x
              print(False in tuplas8)
 
     #Obter a quantidade que um valor se repete em tupla
