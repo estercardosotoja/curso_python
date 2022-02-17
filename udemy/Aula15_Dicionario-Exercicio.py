@@ -44,7 +44,7 @@ flor_Cara = 0
 for flor in flores:
     if flores[flor] > flor_Cara:
         flor_Cara = flores[flor]
-        itens_Caro = {flores[flor], flor}
+        itens_Caro = {flores[flor]: flor}
 print(f"Flor mais cara é a {flor} e custa R$ {flor_Cara}  "
       f"\n Itens Caros: {itens_Caro} ")
 
@@ -53,7 +53,7 @@ flor_Barata = flores[flor]
 for flor in flores:
     if flores[flor] < flor_Barata:
         flor_Barata = flores[flor]
-        itens_Barato = {flores[flor], flor}
+        itens_Barato = {flores[flor]: flor}
 print(f"Flor mais barata é a {flor} e custa R$ {flor_Barata} "
       f"\n Itens Baratos : {itens_Barato}")
 
@@ -61,7 +61,7 @@ presente_Caro = 0
 for item in presentes:
     if presentes[item] > presente_Caro:
         presente_Caro = presentes[item]
-        itens_Caro = {item, presentes[item]}
+        itens_Caro = {item: presentes[item]}
 print(f"Presente Caro = {presente_Caro} "
       f"\n Itens Caros: {itens_Caro} ")
 
@@ -69,7 +69,7 @@ presente_Barato = presentes[item]
 for item in presentes:
     if presentes[item] < presente_Caro:
         presente_Caro = presentes[item]
-        itens_Barato = {item, presentes[item]}
+        itens_Barato = {item: presentes[item]}
 print(f"Presente Barato = {presente_Barato}"
       f"\n Itens Baratos : {itens_Barato}")
 
@@ -77,7 +77,7 @@ lugar_Caro = 0
 for lugar in lugares:
     if lugares[lugar] > lugar_Caro:
         lugar_Caro = lugares[lugar]
-        itens_Caro = {lugares[lugar], lugar}
+        itens_Caro = {lugares[lugar]: lugar}
 print(f"Lugar Caro = {lugar_Caro} "
       f"\n Itens Caros: {itens_Caro} ")
 
@@ -85,7 +85,7 @@ lugar_Barato = lugares[lugar]
 for lugar in lugares:
     if lugares[lugar] < lugar_Barato:
         lugar_Barato = lugares[lugar]
-        itens_Barato = {lugares[lugar], lugar}
+        itens_Barato = {lugares[lugar]: lugar}
 print(f"Lugar Barato = {lugar_Barato}"
       f"\n Itens Baratos : {itens_Barato}")
 
