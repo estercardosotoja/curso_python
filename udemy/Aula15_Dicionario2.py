@@ -95,4 +95,3 @@ Funcionarios:
         print(min(dict.values()))
         print(sum(dict.values()))
 """
-

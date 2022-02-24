@@ -18,35 +18,56 @@
 
 def realizar_cadastro():
     print(f"\n  \t \t \t *********** Cadastro ********** ")
-    name = str(input("Digite seu username: "))
-    senha = input("Digite a senha: ")
-    user = {name: senha}
-    print(f"\o/ Realizado Cadastro \o/")
+    #name = str(input('Digite seu username:'))
+    #senha = str(input('Digite a senha:'))
+    #user = {name: senha}
+    user = {'ester': '123'}
+    print(f"\n\o/ Realizado Cadastro \o/")
     return user
 
-
 def realizar_login(user):
-    print(f"\n \t \t \t *********** Realizar Login ********** ")
-    print(user)
-    if cadastro:
-        nome_digitado = str(input("Digite nome do usuário"))
-        senha_digitada = input("Digite a senha")
-        print(user.get(nome_digitado))
-        print(user.get(senha_digitada))
-        if nome_digitado in user.values() and senha_digitada in user.items():
-            print("******** Realizamos login ******")
-            return True
+    cadastro = len(user)
+    if cadastro > 0:
+        nome_digitado = 'ester'
+        senha_digitada = '123'
+        #print(f'Nome digitado: {user.values(senha_digitada)} \n Tipo:  {type(user.get(senha_digitada))}')
+        #print(f'Senha digitada: {user.get(nome_digitado)} \n Tipo:  {type(user.get(nome_digitado))} ')
+
+    for nome, senha in user.items():
+        print(f"Nome = {nome} - Senha = {senha}")
+        if nome_digitado is nome:
+            if senha_digitada is senha:
+                print("Login")
+                return True
+            else:
+                print("NO LOGIN SENHA")
+                return False
         else:
-            print("Não realizamos login \n Erro senha ou user")
+            print("NO LOGIN EMAIL")
             return False
     else:
-        print("Não tem nenhum usuário cadastrado \nCadastre novo usuário" )
+        print("Usuário ou Senha Inválido!")
         return False
 
 
 
 def alterar_senha():
     print(f"\n  \t \t \t *********** Alterando Senha ********** ")
+    cadastro = len(user)
+    if cadastro > 0:
+        nome_digitado = 'ester' #str(input(f'User:'))
+        for nome, senha in user.items():
+            print(f'nome: {nome}, nome_digitado:{nome_digitado}')
+            if nome_digitado is nome:
+                senha_digitada = input(f'Digite a nova senha:')3+
+                user_novo = {nome_digitado, senha_digitada}
+                user.update(user_novo)
+            else:
+                print("Não há usuário com este nome!")
+                return False
+    else:
+        print("Não há usuários cadastrados!")
+        return False
 
 def realizar_logout():
     print(f"\n \t \t \t *********** Logout ********** ")
@@ -77,7 +98,6 @@ def menu():
 def sair():
     sair = str(input("Deseja continuar? s/n "))
     return sair
-
 
 user = { }
 cadastro = True
