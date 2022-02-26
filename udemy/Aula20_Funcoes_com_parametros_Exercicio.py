@@ -55,13 +55,13 @@ def alterar_senha():
     print(f"\n  \t \t \t *********** Alterando Senha ********** ")
     cadastro = len(user)
     if cadastro > 0:
-        nome_digitado = 'ester' #str(input(f'User:'))
+        nome_digitado = str(input(f'User:'))
         for nome, senha in user.items():
-            print(f'nome: {nome}, nome_digitado:{nome_digitado}')
             if nome_digitado is nome:
-                senha_digitada = input(f'Digite a nova senha:')3+
-                user_novo = {nome_digitado, senha_digitada}
-                user.update(user_novo)
+                senha_digitada = input(f'Digite a nova senha:')
+                user[nome_digitado] = senha_digitada
+                print(f"Senha alterada com sucesso \n User: {user.get(senha)} \n Senha: {user.get(nome)}")
+                return True
             else:
                 print("Não há usuário com este nome!")
                 return False
@@ -71,6 +71,11 @@ def alterar_senha():
 
 def realizar_logout():
     print(f"\n \t \t \t *********** Logout ********** ")
+    if cadastro > 0:
+        print("Você está logado")
+    else:
+        print("Você não está logado")
+        return False
 
 def menu():
     global user
