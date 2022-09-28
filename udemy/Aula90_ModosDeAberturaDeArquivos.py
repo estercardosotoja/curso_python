@@ -40,7 +40,7 @@ c)'+' -> Abrir para atualização de leitura ou escrita.
 Ex:
 """
 
-with open('herois.txt','x+') as arq:
+with open('herois.txt', 'x+') as arq:
     arq.write('Superman\n')
     arq.write('Batman\n')
     arq.seek(0)
