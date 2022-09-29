@@ -11,7 +11,8 @@ Métodos - POO
 - Tem esse nome porque precisamos de uma instância da classe para utilizar este método.
 
 - Método construtor: Um método especial, conhecido também como 'método mágico' (assim como outros que 
-começam e terminam com dunder). Possui esse nome pois constrói objetos da classe a que pertence.
+começam e terminam com dunder ''__nome_metodo__''). 
+Possui esse nome pois constrói objetos da classe a que pertence.
 
 Sintaxe: def __init__(self, parâmetros):
 
@@ -19,6 +20,7 @@ Sintaxe: def __init__(self, parâmetros):
 
 #Exemplo
 """
+
 
 class Carro:
 
@@ -31,9 +33,11 @@ class Carro:
 
 carroPai = Carro(4, 'prata')
 print(carroPai.cor)
+
 #print(carroPai.__arcondicionado) #AttributeError
 
 #_____________________________________________________________________________________________
+
 
 class Sapato:
 
@@ -52,6 +56,7 @@ print(tamanco.qtdd)
 print(Sapato.qtdd)
 
 #_____________________________________________________________________________________________
+
 
 class Computador:
 
@@ -72,6 +77,7 @@ pcPrimo.memoria(1024, 8)
 #Computador.memoria(1024, 8) #TypeError
 
 print(pcPrimo.hdd)
+
 """
 ___________________________________________________________________________________________
 
@@ -108,6 +114,8 @@ Estáticos
 
 #Exemplo
 """
+
+
 class Computador:
 
     peixes = 98
@@ -121,6 +129,7 @@ class Computador:
     def modelo():
         return 'HJEF348UG3HWFH'
 
+    #Metodo Construtor
     def __init__(self, cor, peso, polegadas):
         self.cor = cor
         self.peso = peso
@@ -130,6 +139,7 @@ class Computador:
         self.hdd = hdd
         self.ram = ram
 
+    #Metodo Privado
     def __caracteristicas(self):
         return f'{self.cor} e com {self.hdd} GB'
 

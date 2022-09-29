@@ -9,7 +9,7 @@ Ex: Poderiamos criar uma Classe chamada Controle que justamente controla o objet
 Como declaro a classe?
 """
 
-class nome_definido:
+#class nome_definido:
 #Processo
 #Ex:
 class Controle:
