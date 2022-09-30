@@ -30,14 +30,21 @@ class DadosPessoais:
         return self.placa_car()
 
     def __str__(self):
-        return '\n --- Dados Pessoais --- ' \
-               '\n Email: ' + self.email + \
+        return '\n Email: ' + self.email + \
                '\n CPF: ' + self.cpf + \
                '\n Endereço: ' + self.end + \
                '\n Placa do Carro: ' + self.placa_car
 
+    @email.setter
+    def email(self, novo_email):
+        self.__email = novo_email
+
 
 pessoa1 = DadosPessoais('pessoa1@gmail.com', '123.456.789.09', 'Rua da Esperanca n 409', 'QWE-4568')
 pessoa2 = DadosPessoais('pessoa2@gmail.com', '098.765.432.10', 'Rua da Comemoracao n 89', 'ASD-3216')
+print('\n --- Dados Pessoais --- ')
 print(pessoa1)
 print(pessoa2)
+pessoa1.email = 'alterado@gmail.com'
+print(pessoa1)
+
